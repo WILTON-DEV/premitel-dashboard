@@ -6,13 +6,8 @@ const SignIn = () => {
   return (
     <>
       <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-        <div className="flex h-[100vh] flex-wrap items-center placeholder:">
-          <div className="hidden h-full w-full xl:block xl:w-1/2 ">
-            <img src="https://res.cloudinary.com/dmhsf5hqd/image/upload/v1689431944/Image_nzuzjq.png" alt="" className='h-full w-full object-cover'/>
-            {/* <div className="h-full text-center">
-              <img src="https://res.cloudinary.com/dmhsf5hqd/image/upload/v1689431944/Image_nzuzjq.png" alt="" className='h-full w-full'/>
-            </div> */}
-          </div>
+        <div className="flex h-[100vh] flex-wrap items-center  placeholder:">
+       
 
           <div className="w-full border-stroke dark:border-strokedark xl:w-1/2 xl:border-l-2">
             <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
@@ -144,6 +139,14 @@ const SignIn = () => {
               </form>
             </div>
           </div>
+
+           <div className="hidden h-full w-full xl:block xl:w-1/2 ">
+            <img src="https://res.cloudinary.com/dmhsf5hqd/image/upload/v1689431944/Image_nzuzjq.png" alt="" className='h-full w-full object-cover'/>
+            {/* <div className="h-full text-center">
+              <img src="https://res.cloudinary.com/dmhsf5hqd/image/upload/v1689431944/Image_nzuzjq.png" alt="" className='h-full w-full'/>
+            </div> */}
+          </div>
+
         </div>
       </div>
     </>
