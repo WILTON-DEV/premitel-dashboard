@@ -23,9 +23,15 @@ const Dashboard = () => {
           <ChartTwo />
         </div>
        
-        <div className=" mt-4 flex flex-col sm:flex-row space-x-4">
-         
+        <div className=" mt-4 flex flex-col  sm:flex-row justify-between ">
+          <div className='bg-white px-5'>
+            <h5 className="text-xl my-5 font-semibold text-black dark:text-white">
+            Upcoming Appointments
+          </h5>
+            
             <TableTwo />
+         </div>
+            
          
             <ChartThree />
                

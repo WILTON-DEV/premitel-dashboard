@@ -3,12 +3,13 @@ import { Route, Routes } from 'react-router-dom';
 
 import Dashboard from './pages/Dashboard';
 import Loader from './common/Loader';
-import SignIn from './pages/Authentication/SignIn';
-import SignUp from './pages/Authentication/SignUp';
-import Verify from './pages/Authentication/Verify';
-import Category from './pages/Authentication/Category';
-import ResetPassword from './pages/Authentication/ResetPassword';
-import ForgotPassword from './pages/Authentication/ForgotPassword';
+
+const SignIn = lazy(()=> import('./pages/Authentication/SignIn'));
+const SignUp = lazy(()=> import('./pages/Authentication/SignUp'));
+const Verify = lazy(()=> import('./pages/Authentication/Verify'));
+const Category = lazy(()=> import('./pages/Authentication/Category')) ;
+const ResetPassword = lazy(() => import('./pages/Authentication/ResetPassword'));
+const ForgotPassword = lazy(()=> import( './pages/Authentication/ForgotPassword'));
 
 const Appointment = lazy(() => import('./pages/Appointment'));
 const Settings = lazy(() => import('./pages/Settings'));

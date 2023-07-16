@@ -1,129 +1,91 @@
-import ProductOne from '../images/product/product-01.png';
-import ProductTwo from '../images/product/product-02.png';
-import ProductThree from '../images/product/product-03.png';
-import ProductFour from '../images/product/product-04.png';
+import React from 'react';
+import { Table } from 'antd';
+import type { ColumnsType, TableProps } from 'antd/es/table';
+import user1 from "../images/user/user-01.png";
+import user2 from "../images/user/user-02.png";
+import user3 from "../images/user/user-03.png";
+import user4 from "../images/user/user-04.png";
+import user5 from "../images/user/user-05.png";
 
-const TableTwo = () => {
-  return (
-    <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-      <div className="py-6 px-4 md:px-6 xl:px-7.5">
-        <h4 className="text-xl font-semibold text-black dark:text-white">
-          Top Products
-        </h4>
-      </div>
+interface DataType {
+  key: React.Key;
+  name: React.ReactNode;
+  date: string;
+  age: number;
+  gender: string;
+}
 
-      <div className="grid grid-cols-6 border-t border-stroke py-4.5 px-4 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
-        <div className="col-span-3 flex items-center">
-          <p className="font-medium">Product Name</p>
-        </div>
-        <div className="col-span-2 hidden items-center sm:flex">
-          <p className="font-medium">Category</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="font-medium">Price</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="font-medium">Sold</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="font-medium">Profit</p>
-        </div>
-      </div>
+const columns: ColumnsType<DataType> = [
+  {
+    title: 'Patient Name',
+    dataIndex: 'name',
+  },
+  {
+    title: 'Appointment Date',
+    dataIndex: 'date',
+   
+  },
+  {
+    title: 'Age',
+    dataIndex: 'age',
+    
+  },
+  {
+    title: 'Gender',
+    dataIndex: 'gender',
+    
+  },
+];
 
-      <div className="grid grid-cols-6 border-t border-stroke py-4.5 px-4 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
-        <div className="col-span-3 flex items-center">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <div className="h-12.5 w-15 rounded-md">
-              <img src={ProductOne} alt="Product" />
-            </div>
-            <p className="text-sm text-black dark:text-white">
-              Apple Watch Series 7
-            </p>
-          </div>
-        </div>
-        <div className="col-span-2 hidden items-center sm:flex">
-          <p className="text-sm text-black dark:text-white">Electronics</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="text-sm text-black dark:text-white">$269</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="text-sm text-black dark:text-white">22</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="text-sm text-meta-3">$45</p>
-        </div>
-      </div>
-      <div className="grid grid-cols-6 border-t border-stroke py-4.5 px-4 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
-        <div className="col-span-3 flex items-center">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <div className="h-12.5 w-15 rounded-md">
-              <img src={ProductTwo} alt="Product" />
-            </div>
-            <p className="text-sm text-black dark:text-white">Macbook Pro M1</p>
-          </div>
-        </div>
-        <div className="col-span-2 hidden items-center sm:flex">
-          <p className="text-sm text-black dark:text-white">Electronics</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="text-sm text-black dark:text-white">$546</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="text-sm text-black dark:text-white">34</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="text-sm text-meta-3">$125</p>
-        </div>
-      </div>
-      <div className="grid grid-cols-6 border-t border-stroke py-4.5 px-4 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
-        <div className="col-span-3 flex items-center">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <div className="h-12.5 w-15 rounded-md">
-              <img src={ProductThree} alt="Product" />
-            </div>
-            <p className="text-sm text-black dark:text-white">
-              Dell Inspiron 15
-            </p>
-          </div>
-        </div>
-        <div className="col-span-2 hidden items-center sm:flex">
-          <p className="text-sm text-black dark:text-white">Electronics</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="text-sm text-black dark:text-white">$443</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="text-sm text-black dark:text-white">64</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="text-sm text-meta-3">$247</p>
-        </div>
-      </div>
-      <div className="grid grid-cols-6 border-t border-stroke py-4.5 px-4 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
-        <div className="col-span-3 flex items-center">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <div className="h-12.5 w-15 rounded-md">
-              <img src={ProductFour} alt="Product" />
-            </div>
-            <p className="text-sm text-black dark:text-white">HP Probook 450</p>
-          </div>
-        </div>
-        <div className="col-span-2 hidden items-center sm:flex">
-          <p className="text-sm text-black dark:text-white">Electronics</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="text-sm text-black dark:text-white">$499</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="text-sm text-black dark:text-white">72</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="text-sm text-meta-3">$103</p>
-        </div>
-      </div>
-    </div>
-  );
+const data: DataType[] = [
+  {
+    key: '1',
+    name: <div className='flex items-center'> <img src={user1} alt="" className='w-10 mr-2' /> Atugonza Ronnie</div>,
+    date: '19/05/2023 11:00 pm',
+    age: 25,
+    gender: 'Male',
+  },
+  {
+    key: '2',
+    name: <div className='flex items-center '> <img src={user2} alt="" className='w-10 mr-2' /> Hellen Zabulon </div>,
+    date: '11/06/2023 1:00 pm',
+    age: 25,
+    gender: 'Female',
+  },
+  {
+    key: '3',
+    name: <div className='flex items-center'> <img src={user3} alt="" className='w-10 mr-2' /> Asiimwe Fred </div>,
+    date: '30/06/2023 2:00 pm',
+    age: 24,
+    gender: 'Male',
+  },
+  {
+    key: '4',
+    name: <div className='flex items-center'> <img src={user4} alt="" className='w-10 mr-2' /> Bukenya Kiiza Roland </div>,
+    date: '20/07/2023 8:00 am',
+    age: 28,
+    gender: 'Male',
+  },
+  {
+    key: '5',
+    name: <div className='flex items-center'> <img src={user5} alt="" className='w-10 mr-2'/> Baluku Wilton </div>,
+    date: '10/06/2023 10:00 am',
+    age: 26,
+    gender: 'Male',
+  },
+  {
+    key: '6',
+    name: <div className='flex items-center'> <img src={user1} alt="" className='w-10 mr-2' /> Atugonza Ronnie</div>,
+    date: '19/05/2023 11:00 pm',
+    age: 25,
+    gender: 'Male',
+  },
+];
+
+const onChange: TableProps<DataType>['onChange'] = (pagination, filters, sorter, extra) => {
+  console.log('params', pagination, filters, sorter, extra);
 };
+
+const TableTwo: React.FC = () => <Table columns={columns} dataSource={data} pagination={{disabled: false, pageSize:3}} onChange={onChange} />;
 
 export default TableTwo;
