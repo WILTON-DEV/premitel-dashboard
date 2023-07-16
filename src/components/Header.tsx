@@ -107,9 +107,6 @@ const Header = (props: {
             <DropdownNotification />
             {/* <!-- Notification Menu Area --> */}
 
-            {/* <!-- Chat Notification Area --> */}
-            <DropdownMessage />
-            {/* <!-- Chat Notification Area --> */}
           </ul>
 
           {/* <!-- User Area --> */}

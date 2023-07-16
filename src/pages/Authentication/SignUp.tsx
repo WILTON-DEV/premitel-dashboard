@@ -6,7 +6,7 @@ const SignUp = () => {
   return (
     <>
       <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-        <div className="flex flex-wrap h-[120vh] items-center">
+        <div className="flex h-[120vh] flex-wrap items-center">
           {/* <div className="hidden h-full w-full  xl:block xl:w-1/2">
           
             <img src="https://res.cloudinary.com/dmhsf5hqd/image/upload/v1689431944/Image_nzuzjq.png" alt="" className='h-full w-full object-cover'/>
@@ -15,9 +15,11 @@ const SignUp = () => {
 
           <div className="h-full w-full border-stroke dark:border-strokedark xl:w-1/2 xl:border-l-2">
             <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
-                <span className="mb-1.5 block font-medium">Create Your Account</span>
+              <span className="mb-1.5 block font-medium">
+                Create Your Account
+              </span>
               <h2 className="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
-                Sign Up to <span className='text-[#C92B27]'>Primetel</span>
+                Sign Up to <span className="text-[#C92B27]">Primetel</span>
               </h2>
 
               {/* <span className="mb-1.5 block font-medium">Start for free</span>
@@ -59,9 +61,7 @@ const SignUp = () => {
                       </svg>
                     </span>
                   </div>
-                  
                 </div>
-                
 
                 <div className="mb-4">
                   <label className="mb-2.5 block font-medium text-black dark:text-white">
@@ -221,10 +221,12 @@ const SignUp = () => {
             </div>
           </div>
 
-           <div className="hidden h-full w-full  xl:block xl:w-1/2">
-          
-            <img src="https://res.cloudinary.com/dmhsf5hqd/image/upload/v1689431944/Image_nzuzjq.png" alt="" className='h-full w-full object-cover'/>
-            
+          <div className="hidden h-full w-full  xl:block xl:w-1/2">
+            <img
+              src="https://res.cloudinary.com/dmhsf5hqd/image/upload/v1689431944/Image_nzuzjq.png"
+              alt=""
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
