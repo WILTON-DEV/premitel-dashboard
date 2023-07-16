@@ -1,21 +1,16 @@
 import { Suspense, lazy, useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import ECommerce from './pages/Dashboard/ECommerce';
-import SignIn from './pages/Authentication/SignIn';
-import SignUp from './pages/Authentication/SignUp';
+import Dashboard from './pages/Dashboard';
 import Loader from './common/Loader';
 
-const Calendar = lazy(() => import('./pages/Calendar'));
-const Chart = lazy(() => import('./pages/Chart'));
-const FormElements = lazy(() => import('./pages/Form/FormElements'));
-const FormLayout = lazy(() => import('./pages/Form/FormLayout'));
-const Profile = lazy(() => import('./pages/Profile'));
+const Appointment = lazy(() => import('./pages/Appointment'));
 const Settings = lazy(() => import('./pages/Settings'));
-const Tables = lazy(() => import('./pages/Tables'));
-const Alerts = lazy(() => import('./pages/UiElements/Alerts'));
-const Buttons = lazy(() => import('./pages/UiElements/Buttons'));
+const Prescription = lazy(() => import('./pages/Prescription'));
 const DefaultLayout = lazy(() => import('./layout/DefaultLayout'));
+const Patients = lazy(() => import('./pages/Patients'));
+const Pharmacy = lazy(() => import('./pages/Pharmacy'));
+const Laboratories = lazy(() => import('./pages/Laboratories'));
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -29,47 +24,47 @@ function App() {
   ) : (
     <>
       <Routes>
-        <Route path="/auth/signin" element={<SignIn />} />
-        <Route path="/auth/signup" element={<SignUp />} />
+       
         <Route element={<DefaultLayout />}>
-          <Route index element={<ECommerce />} />
+          <Route index element={<Dashboard />} />
           <Route
-            path="/calendar"
+            path="/appointments"
             element={
               <Suspense fallback={<Loader />}>
-                <Calendar />
+                <Appointment />
               </Suspense>
             }
           />
           <Route
-            path="/profile"
+            path="/patients"
             element={
               <Suspense fallback={<Loader />}>
-                <Profile />
+                <Patients />
               </Suspense>
             }
           />
+         
           <Route
-            path="/forms/form-elements"
+            path="/prescription"
             element={
               <Suspense fallback={<Loader />}>
-                <FormElements />
+                <Prescription />
               </Suspense>
             }
-          />
-          <Route
-            path="/forms/form-layout"
+            />
+            <Route
+            path="/pharmacy"
             element={
               <Suspense fallback={<Loader />}>
-                <FormLayout />
+                <Pharmacy />
               </Suspense>
             }
-          />
-          <Route
-            path="/tables"
+            />
+            <Route
+            path="/laboratories"
             element={
               <Suspense fallback={<Loader />}>
-                <Tables />
+                <Laboratories />
               </Suspense>
             }
           />
@@ -81,30 +76,7 @@ function App() {
               </Suspense>
             }
           />
-          <Route
-            path="/chart"
-            element={
-              <Suspense fallback={<Loader />}>
-                <Chart />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/ui/alerts"
-            element={
-              <Suspense fallback={<Loader />}>
-                <Alerts />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/ui/buttons"
-            element={
-              <Suspense fallback={<Loader />}>
-                <Buttons />
-              </Suspense>
-            }
-          />
+       
         </Route>
       </Routes>
     </>

@@ -27,6 +27,7 @@ module.exports = {
       'gray-3': '#FAFAFA',
       whiten: '#F1F5F9',
       whiter: '#F5F7FD',
+      cardbg: 'rgba(128, 202, 238,0.3)',
       boxdark: '#24303F',
       'boxdark-2': '#1A222C',
       strokedark: '#2E3A47',
